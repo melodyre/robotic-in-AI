@@ -150,46 +150,39 @@ def main():
     # start and goal position
     sx = 10.0  # [m]
     sy = 10.0  # [m]
-    gx = 50.0  # [m]
-    gy = 50.0  # [m]
+    gx = 30.0  # [m]
+    gy = 30.0  # [m]
     grid_size = 2.0  # [m]
     robot_radius = 1.0  # [m]
 
     # set obstacle positions
     ox, oy = [], []
-    for i in range(-10, 60):
+    for i in range(0, 40):
         ox.append(i)
-        oy.append(-10.0)
-    for i in range(-10, 60):
-        ox.append(60.0)
+        oy.append(0.0)
+    for i in range(0, 40):
+        ox.append(40.0)
         oy.append(i)
-    for i in range(-10, 61):
+    for i in range(0, 41):
         ox.append(i)
-        oy.append(60.0)
-    for i in range(-10, 61):
-        ox.append(-10.0)
+        oy.append(40.0)
+    for i in range(0, 41):
+        ox.append(0.0)
         oy.append(i)
-    for i in range(0, 35):
+    for i in range(5, 35):
         ox.append(20.0)
         oy.append(i)
-    for i in range(-10,30):
+    for i in range(0,21):
         ox.append(i)
-        oy.append(35)
-    for i in range(0, 25):
-        ox.append(40.0)
-        oy.append(60.0 - i)
+        oy.append(20)
 
 
 
     #  target course
-    cx = [50.0, 48.0, 48.0, 48.0, 46.0, 46.0, 44.0, 44.0, 42.0, 42.0, 40.0,
-     40.0, 40.0, 38.0, 38.0, 36.0, 36.0, 34.0, 34.0, 32.0, 32.0, 30.0, 28.0, 
-     26.0, 24.0, 22.0, 20.0, 18.0, 16.0, 14.0, 12.0, 12.0, 10.0]
+    cx = [30.0, 28.0, 28.0, 28.0, 26.0, 26.0, 24.0, 24.0, 22.0, 22.0, 22.0, 22.0, 22.0, 22.0, 20.0, 18.0, 16.0, 14.0, 12.0, 10.0]
     cx.reverse()
 
-    cy = [50.0, 48.0, 46.0, 44.0, 42.0, 40.0, 38.0, 36.0, 34.0, 32.0, 30.0,
-     28.0, 26.0, 24.0, 22.0, 20.0, 18.0, 16.0, 14.0, 12.0, 10.0, 8.0, 6.0, 
-     4.0, 2.0, 0.0, -2.0, 0.0, 2.0, 4.0, 6.0, 8.0, 10.0]
+    cy = [30.0, 28.0, 26.0, 24.0, 22.0, 20.0, 18.0, 16.0, 14.0, 12.0, 10.0, 8.0, 6.0, 4.0, 2.0, 4.0, 6.0, 8.0, 10.0, 10.0]
     cy.reverse()
 
     target_speed = 10.0 / 3.6  # [m/s]
